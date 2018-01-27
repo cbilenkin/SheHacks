@@ -26,7 +26,6 @@
                     @click="center=m.position"
             ></gmap-marker>
         </gmap-map>
-      <p>and the buttons etc will go down here</p>
     </div>
 </template>   
 <script>
