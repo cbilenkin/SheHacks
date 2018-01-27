@@ -1,6 +1,6 @@
-# shehacks
+# neighborcare
 
-> A Django - Vue.js project
+> A Django - Vue.js project at SheHacks Boston 2018
 
 ## Build Setup
 
