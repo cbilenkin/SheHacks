@@ -1,13 +1,11 @@
 <style>
-  .map-container {
+.map-container {
     width: 500px;
     height: 300px;
-  }
+}
 </style>
 <template>
-    <div>
-        <h1>neighbor.care</h1>
-        <p>there's no ux/ui or css right now sorry</p>
+    <div id="map">
         <gmap-autocomplete :value="description"
                            @place_changed="setPlace"
                            class="input-item"
@@ -28,9 +26,9 @@
                     @click="center=m.position"
             ></gmap-marker>
         </gmap-map>
-
+      <p>and the buttons etc will go down here</p>
     </div>
-</template>
+</template>   
 <script>
     export default{
         data(){
