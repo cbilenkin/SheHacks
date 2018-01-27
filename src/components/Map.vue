@@ -4,15 +4,80 @@
     height: 300px;
   }
 </style>
-
 <template>
-  <div id="app">
-    <gmap-map class="map-container" :center="{lat:1.38, lng:103.8}" :zoom="12">
-      <gmap-marker :position="{lat:1.38, lng:103.8}">
-      </gmap-marker>
-      <gmap-info-window :position="{lat:1.38, lng:103.8}">
-        Hello world!
-      </gmap-info-window>
-    </gmap-map>
-  </div>
+    <div>
+        <h1>neighbor.care</h1>
+        <p>there's no ux/ui or css right now sorry</p>
+        <gmap-autocomplete :value="description"
+                           @place_changed="setPlace"
+                           class="input-item"
+        >
+        </gmap-autocomplete>
+        <gmap-map
+                id="map"
+                :center="center"
+                :zoom="18"
+                style="width: 100%; height: 300px"
+        >
+            <gmap-marker
+                    :key="index"
+                    v-for="(m, index) in markers"
+                    :position="center = m.position"
+                    :clickable="true"
+                    :draggable="true"
+                    @click="center=m.position"
+            ></gmap-marker>
+        </gmap-map>
+
+    </div>
 </template>
+<script>
+    export default{
+        data(){
+            return {
+                center: {lat: 23.8103, lng: 90.4125},
+                markers: [
+                    {position: {lat: 10.0, lng: 10.0}}
+                ],
+                getMap: this.$root.mapping,
+                description: '',
+                latLng: {},
+                place: null
+            }
+        },
+
+        mounted(){
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(function (position) {
+                    let pos = {
+                        lat: position.coords.latitude,
+                        lng: position.coords.longitude
+                    };
+                    this.center.lat = pos.lat;
+                    this.center.lng = pos.lng;
+                    this.markers[0].position.lat = pos.lat;
+                    this.markers[0].position.lng = pos.lng;
+
+                    this.geocodeLatLng(new google.maps.Geocoder, pos, google.maps.InfoWindow);
+
+                }.bind(this));
+            }
+        },
+        methods: {
+            setDescription(description){
+                this.description = description
+            },
+            setPlace(place){
+                this.latLng = {
+                    lat: place.geometry.location.lat(),
+                    lng: place.geometry.location.lng(),
+                }
+            },
+            geocodeLatLng(geocoder, map, infowindow){
+                geocoder.geocode({'location':this.center}, function(results, status){
+                    console.log(results, status); 
+                });
+            }
+        },
+    }
+</script>
