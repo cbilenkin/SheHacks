@@ -63,6 +63,88 @@ b {
   display: inline-block;
 }
 
+c {
+  text-decoration: none;
+  -moz-border-radius: 30px;
+  -webkit-border-radius: 30px;
+  border-radius: 0px;
+  padding: 20px 10px 0px 23px;
+  color:gray;
+  font-size: 30px;
+  margin-right: 0px;
+  margin-left: 800px;
+  margin-bottom: 0px;
+  text-transform: uppercase;
+  font-family: sans-serif;
+  font-weight: bold;
+  position: relative;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  display: inline-block;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 90px;
+  height: 45px;
+  margin-right: 10px;
+  margin-left: 0px;
+  margin-bottom: 0px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {display:none;}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #FF3830;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 39px;
+  width: 39px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #76EA15;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #76EA15;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(44px);
+  -ms-transform: translateX(44px);
+  transform: translateX(44px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
 a {
   text-decoration: none;
   -moz-border-radius: 30px;
@@ -134,7 +216,7 @@ a .round i {
 
 .overlay {
   position: absolute;
-  top: 500px;
+  top: 465px;
   bottom: 20px;
   left: 15px;
   right: 900px;
@@ -153,7 +235,7 @@ a .round i {
   padding: 5px;
   background: #A8E884;
   color:#000;
-  border-radius: 5px;
+  border-radius: 30px;
   width: 50%;
   position: relative;
   transition: all 5s ease-in-out;
@@ -193,4 +275,5 @@ a .round i {
   max-height: 30%;
   overflow: auto;
   margin-left: 30px;
+  margin-bottom: 10px;
 }
