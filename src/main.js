@@ -17,10 +17,6 @@ Vue.use(VueGoogleMaps, {
   }
 })
 
-Vue.component('modal', {
-  template: '#modal-template'
-})
-
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
