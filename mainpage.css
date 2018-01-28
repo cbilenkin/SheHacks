@@ -72,7 +72,7 @@ c {
   color:gray;
   font-size: 30px;
   margin-right: 0px;
-  margin-left: 540px;
+  margin-left: 450px;
   margin-bottom: 0px;
   text-transform: uppercase;
   font-family: sans-serif;
@@ -143,6 +143,26 @@ input:checked + .slider:before {
 
 .slider.round:before {
   border-radius: 50%;
+}
+
+d {
+  text-decoration: none;
+  -moz-border-radius: 30px;
+  -webkit-border-radius: 30px;
+  border-radius: 30px;
+  padding: 5px 0px 5px 23px;
+  color: #000;
+  text-transform: uppercase;
+  font-family: sans-serif;
+  font-size: 15px;
+  font-weight: bold;
+  margin-left: 740px;
+  position: relative;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  display: inline-block;
 }
 
 a {
