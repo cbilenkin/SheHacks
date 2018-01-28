@@ -10,7 +10,7 @@
                 id="map"
                 :center="center"
                 :zoom="18"
-                style="width: 180%; height: 450px"
+                style="width: 180%; height: 400px"
         >
             <gmap-marker
                     :key="index"
@@ -21,7 +21,7 @@
                     @click="center=m.position"
             ></gmap-marker>
         </gmap-map>
-    </div>
+    </div> 
 </template>   
 <script> 
     export default{
