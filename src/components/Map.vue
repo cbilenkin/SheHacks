@@ -6,11 +6,6 @@
 </style>
 <template>
     <div id="map">
-        <gmap-autocomplete :value="description"
-                           @place_changed="setPlace"
-                           class="input-item"
-        >
-        </gmap-autocomplete>
         <gmap-map
                 id="map"
                 :center="center"
