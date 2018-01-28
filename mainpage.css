@@ -68,11 +68,11 @@ c {
   -moz-border-radius: 30px;
   -webkit-border-radius: 30px;
   border-radius: 0px;
-  padding: 20px 10px 0px 23px;
+  padding: 0px 10px 10px 23px;
   color:gray;
   font-size: 30px;
   margin-right: 0px;
-  margin-left: 800px;
+  margin-left: 540px;
   margin-bottom: 0px;
   text-transform: uppercase;
   font-family: sans-serif;
