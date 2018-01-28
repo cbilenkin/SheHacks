@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@google/maps": "^0.4.5",
+    "geo2zip": "^1.0.9",
     "vue": "^2.5.2",
     "vue-router": "^3.0.1",
     "vue2-google-maps": "^0.8.4"

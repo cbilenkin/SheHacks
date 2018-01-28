@@ -23,7 +23,7 @@
         </gmap-map>
     </div>
 </template>   
-<script>
+<script> 
     export default{
         data(){
             return {
@@ -45,6 +45,15 @@
                         lat: position.coords.latitude,
                         lng: position.coords.longitude
                     };
+                    const positionForZip = {
+                        latitude: pos.lat,
+                        longitude: pos.lng
+                    }
+
+                    const { geo2zip } = require('geo2zip')
+                    geo2zip(positionForZip).then(zip => {
+                        console.log(zip)
+                    })
                     this.center.lat = pos.lat;
                     this.center.lng = pos.lng;
                     this.markers[0].position.lat = pos.lat;
