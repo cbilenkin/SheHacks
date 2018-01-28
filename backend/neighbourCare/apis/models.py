@@ -5,8 +5,8 @@ from django.db import models
 class LocationSync(models.Model):
     latitude = models.CharField(max_length=30)
     longtitude = models.CharField(max_length=30)
+    zipcode = models.IntegerField()
     sync_time = models.DateTimeField()
-    
 
 class Device(models.Model):
     first_name = models.CharField(max_length=30)
