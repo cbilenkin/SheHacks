@@ -3,7 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <img src="aoklogo.png" alt="banner">
+    <img src="aoklogo.png" alt="banner" style="width:160px;height:80px;margin-right:1000px;">
+
   </head>
   <body>
     
@@ -23,23 +24,46 @@
 
 <link href="mainpage.css" rel="stylesheet">
 
-<c> Can you help? </c>
 
-<form>
-  <d> Full name: </d>
+<br/>
+<br/>
+
+
+
+<div id="popup2" class="overlay">
+  <div class="popup">
+    <form>
+  <h2> Full name: </h2>
   <input type="text" name="fullname"><br>
-  <d> Phone number: </d>
+  <h2> Phone number: </h2>
   <input type="text" name="phone"><br>
-  <d><input type="submit" value="Submit"></d>
+  <h2><input type="submit" value="Submit"></h2>
 </form>
+<a href="#"></a>
+    <a class="close" href="#">x</a>
+  </div>
+
+</div>
 
 
-<br/>
-<br/>
 
 <div class="type-1">
-  <div>
-    <a href="#popup1" class="btn btn-1">
+  <div id="clicker">
+    <a v-on:click="say('test click')" href="about.html" class="btn btn-6">
+      <span class="txt"> About A-Ok</span>
+      <span class="round"><i class="fa fa-chevron-right"></i></span>
+    </a>
+  </div>
+
+<div>
+    <a href="#popup2" class="btn btn-5">
+      <span class="txt">Click to help</span>
+    </a>
+  </div>
+
+
+  <div id="clicker">
+    <a v-on:click="say('test click')" href="#popup1" class="btn btn-1">
       <span class="txt"> FOOD </span>
       <span class="round"><i class="fa fa-chevron-right"></i></span>
     </a>

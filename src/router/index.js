@@ -13,3 +13,12 @@ export default new Router({
     }
   ]
 })
+
+new Vue({
+  el: 'clicker',
+  methods: {
+    say: function (message) {
+      alert(message)
+    }
+  }
+})
