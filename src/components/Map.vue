@@ -1,7 +1,7 @@
 <style>
 .map-container {
-    width: 500px;
-    height: 300px;
+    width: 900px;
+    height: 1500px;
 }
 </style>
 <template>
@@ -15,7 +15,7 @@
                 id="map"
                 :center="center"
                 :zoom="18"
-                style="width: 100%; height: 300px"
+                style="width: 180%; height: 450px"
         >
             <gmap-marker
                     :key="index"
@@ -26,7 +26,6 @@
                     @click="center=m.position"
             ></gmap-marker>
         </gmap-map>
-      <p>and the buttons etc will go down here</p>
     </div>
 </template>   
 <script>
