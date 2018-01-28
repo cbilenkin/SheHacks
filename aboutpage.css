@@ -1,0 +1,51 @@
+
+
+textinfo {
+  padding: 20px 53px 0px 23px;
+  text-transform: uppercase;
+  font-family: sans-serif;
+  font-weight: bold;
+}
+
+.mainhead {
+  font-size:60px;
+  margin-left: 10px;
+  color:grey;
+}
+
+.h1 {
+  font-size:30px;
+  margin-left: 10px;
+  color:#8CDFD6;
+}
+
+.h2 {
+  font-size:30px;
+  margin-left: 10px;
+  color:#6DC0D5;
+}
+
+.h3 {
+  font-size:30px;
+  margin-left: 10px;
+  color:#AD7A99;
+}
+
+.para1 {
+  font-size:15px;
+  margin-left: 10px;
+  color:#B3F2EB;
+}
+
+.para2 {
+  font-size:15px;
+  margin-left: 10px;
+  color:#8ED4E5;
+}
+
+.para3 {
+  font-size:15px;
+  margin-left: 10px;
+  color:#D2A9C2;
+}
+
